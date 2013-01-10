@@ -11,7 +11,7 @@ Use as you wish but please leave me a comment on the blog post or send me an e-m
 
 == Usage
 
-  $ git clone git://github.com/lassebunk/webcam_app.git
+  $ git clone https://github.com/lassebunk/webcam_app.git
   $ cd webcam_app
   $ bundle install # to make sure you have the Paperclip gem and correct version of Rails
   $ bundle exec rake db:migrate
