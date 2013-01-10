@@ -1,0 +1,41 @@
+<div id="webcam"></div>
+<script type="text/javascript">
+    function onload_complete(msg) {
+        // fetch the CSRF meta tag data
+        var csrf_param = $('meta[name=csrf-param]').attr('content');
+        var csrf_token = $('meta[name=csrf-token]').attr('content');
+
+        // reset the api URL appending the auth token parameter
+        webcam.set_api_url('<%= upload_photos_path %>' + '?' + csrf_param + "=" + encodeURI(encodeURI(csrf_token)));
+    }
+
+    function upload_complete(msg) {
+        if (msg == 'ok') {
+            $('#new_photo').show();
+            $('#photo_description').focus();
+        } else {
+            alert('An error occured');
+            webcam.reset();
+        }
+    }
+
+    webcam.set_swf_url('/webcam.swf');
+    webcam.set_api_url('<%= upload_photos_path %>');
+    webcam.set_quality(90);
+    webcam.set_shutter_sound(true, '/shutter.mp3');
+    webcam.set_hook('onLoad', 'onload_complete');
+    webcam.set_hook('onComplete', 'upload_complete');
+    $('#webcam').html(webcam.get_html(640, 480));
+</script>
+<input type="button" value="Take picture" onclick="webcam.snap();"/>
+
+<%= form_for Photo.new, :html => {:style => "display: none;"} do |f| %>
+    <p>
+      <%= f.label :description %><br/>
+      <%= f.text_field :description %>
+    </p>
+    <p>
+      <%= f.submit "Save the photo" %>
+      or <%= link_to "Take another", new_photo_path %>
+    </p>
+<% end %>

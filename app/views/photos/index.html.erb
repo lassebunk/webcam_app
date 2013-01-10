@@ -1,0 +1,9 @@
+<h1>All photos</h1>
+<p>
+  <% @photos.each do |photo| %>
+    <%= link_to image_tag(photo.image.url(:thumb)), photo %>
+  <% end %>
+</p>
+<p>
+  <%= link_to "Take a new picture", new_photo_path %>
+</p>

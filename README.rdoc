@@ -1,0 +1,23 @@
+== About
+
+This is a demo on how to get your webcam working with Rails 3.
+
+See the app in action here: http://test.lassebunk.dk/webcam/
+
+Also see my blog post at http://lassebunk.dk/2011/02/19/paperclip-jpegcam-webcam-rails3/
+
+Use as you wish but please leave me a comment on the blog post or send me an e-mail at lassebunk@gmail.com if you find it useful.
+
+
+== Usage
+
+  $ git clone git://github.com/lassebunk/webcam_app.git
+  $ cd webcam_app
+  $ bundle install # to make sure you have the Paperclip gem and correct version of Rails
+  $ bundle exec rake db:migrate
+  $ script/rails server
+
+And go to http://localhost:3000/photos
+
+
+Copyright © 2011 Lasse Bunk, released under the MIT license
