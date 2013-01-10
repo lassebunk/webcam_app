@@ -9,11 +9,11 @@ Use as you wish but please leave me a comment on the blog post or send me an e-m
 
 == Usage
 
-  $ git clone https://github.com/lassebunk/webcam_app.git
+  $ git clone https://github.com/lassebunk/webcam_app.git # copy this repository
   $ cd webcam_app
   $ bundle install # to make sure you have the Paperclip gem and correct version of Rails
-  $ bundle exec rake db:migrate
-  $ script/rails server
+  $ bundle exec rake db:migrate # create the database tables
+  $ script/rails server # run the development web server
 
 And go to http://localhost:3000/photos
 
