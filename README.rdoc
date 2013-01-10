@@ -2,11 +2,9 @@
 
 This is a demo on how to get your webcam working with Rails 3.
 
-See the app in action here: http://test.lassebunk.dk/webcam/
+See my blog post about this at http://lassebunk.dk/2011/02/19/paperclip-jpegcam-webcam-rails3/
 
-Also see my blog post at http://lassebunk.dk/2011/02/19/paperclip-jpegcam-webcam-rails3/
-
-Use as you wish but please leave me a comment on the blog post or send me an e-mail at lassebunk@gmail.com if you find it useful.
+Use as you wish but please leave me a comment on the blog post or send me an e-mail at lassebunk@gmail.com if you find it useful and use it on your site.
 
 
 == Usage
