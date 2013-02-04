@@ -16,7 +16,7 @@ $ git clone https://github.com/lassebunk/webcam_app.git # copy this repository
 $ cd webcam_app
 $ bundle install # to make sure you have the Paperclip gem and correct version of Rails
 $ bundle exec rake db:migrate # create the database tables
-$ script/rails server # run the development web server
+$ bundle exec rails server # run the development web server
 ```
 
 Then go to [http://localhost:3000/photos](http://localhost:3000/photos).
